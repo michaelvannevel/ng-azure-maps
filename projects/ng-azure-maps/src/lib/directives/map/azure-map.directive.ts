@@ -246,7 +246,8 @@ export class AzureMapDirective
     const map = new atlas.Map(this.elementRef.nativeElement, {
       disableTelemetry: this.disableTelemetry,
       enableAccessibility: this.enableAccessibility,
-      refreshExpiredTiles: this.refreshExpiredTiles
+      refreshExpiredTiles: this.refreshExpiredTiles,
+      preserveDrawingBuffer: this.preserveDrawingBuffer
     } as atlas.ServiceOptions);
 
     map.events.add('error', e => {
